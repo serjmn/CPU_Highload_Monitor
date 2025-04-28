@@ -1,8 +1,8 @@
 # Define email parameters
 $smtpServer = "smtp.office365.com"
 $smtpPort = 587
-$from = "IT@lfayou.co.il"
-$to = "backup@lfayou.co.il"
+$from = "your mail"
+$to = "your mail"
 $subject = "High CPU Usage Alert"
 $credential = Import-Clixml -Path "C:\LFAMonitor\ps_credentials.xml"
 
@@ -12,7 +12,7 @@ $monitorDuration = 10  # Monitoring duration in minutes
 $checkInterval = 30  # Check every 30 seconds
 
 # Path for logs
-$logPath = "C:\LFAMonitor\CPU_Logs"
+$logPath = "path to log directory"
 if (-not (Test-Path $logPath)) {
     New-Item -ItemType Directory -Path $logPath
 }
